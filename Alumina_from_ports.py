@@ -10,7 +10,7 @@ def app():
     st.set_option('deprecation.showPyplotGlobalUse', False)
 
     #Путь к файлу-источнику
-    full_dis = 'C:\\py_app\\lumira\\data\\alumina_from_ports.xlsx'
+    full_dis = 'https://github.com/KirillVG/streamlit_Al/raw/main/alumina_from_ports.xlsx'
 
     def load_excel(data_link, sheet, col_name):
         dataset = pd.read_excel(data_link, sheet, index_col=False, usecols=col_name)
