@@ -37,7 +37,7 @@ def app():
     #Тех.минимум
     tick_2 = alt.Chart(total_vol).mark_tick(color='yellow',thickness=3,size=80).encode(alt.X('factory'), alt.Y('min'))
     #Подписи значений
-    text = bar_1.mark_text(align='center',baseline='middle',dy=10,color="white").encode(text='volume:Q')
+    text = bar_1.mark_text(align='center',baseline='middle',dy=10,color="yellow").encode(text='volume:Q')
     st.altair_chart((bar_1+bar_2+tick_1+tick_2+text).properties(width=1300,height=300))
     
     sb_factory=st.selectbox(label='Выбрать завод для просмотра прогноза подхода:',options=['Завод_1','Завод_2','Завод_3','Завод_4'])
