@@ -78,14 +78,14 @@ def app():
     alt.Y('volume:Q',title=None),tooltip=["volume","date"]
     )
     #Подписи значений
-    text_1 = bar_1.mark_text(align='center',baseline='middle',dy=-10,color="white").encode(text='volume:Q')
+    text_1 = bar_1.mark_text(align='center',baseline='middle',dy=-10,color="yellow").encode(text='volume:Q')
     #Посуточный план
     bar_2 = alt.Chart(source_pln).mark_bar(size=30).encode(
     alt.X('date:T', title=None,scale=alt.Scale(nice={'interval': 'day', 'step': 2}),axis=alt.Axis(format="%d %m %y")),
     alt.Y('volume:Q',title=None),tooltip=["volume","date"]
     )
     #Подписи значений
-    text_2 = bar_2.mark_text(align='center',baseline='middle',dy=-10,color="white").encode(text='volume:Q')
+    text_2 = bar_2.mark_text(align='center',baseline='middle',dy=-10,color="yellow").encode(text='volume:Q')
    
     st.altair_chart((line_1+bar_1+text_1+bar_2+text_2).properties(width=1400,height=300))
 
@@ -154,7 +154,7 @@ def app():
         alt.Y('port', title=None),
         alt.X('total',title=None)).properties(width=300,height=300)
         
-        text = bar_5.mark_text(dx=-15, color='white', align='center', baseline='middle').encode(
+        text = bar_5.mark_text(dx=-15, color='yellow', align='center', baseline='middle').encode(
         text=alt.Text('total', format='.1f'))   
         
         d = {'col1': [percent], 'col2': ['Всего']}
