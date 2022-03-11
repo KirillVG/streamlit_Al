@@ -89,7 +89,7 @@ def app():
         alt.Y('factory', title=None),
         alt.X('total',title=None)).properties(width=300,height=300)
         
-        text = bar_5.mark_text(dx=-15, color='yellow', align='center', baseline='middle').encode(
+        text = bar_5.mark_text(dx=-15, color='red', align='center', baseline='middle').encode(
         text=alt.Text('total', format='.1f'))   
         
         d = {'col1': [percent], 'col2': ['Всего']}
